@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mohave:ital,wght@0,300..700;1,300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fira Sans", Arial, sans-serif;
+  height: 100vh;
+  background-color: darkblue;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  position: absolute;
+  max-width: 70%;
+  bottom: 15%;
+}
+
+button {
+  font-family: inherit;
+  padding: 20px 40px;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(0, 123, 255);
+  border: none;
+  border-radius: 5px;
+}
+
+/*button:hover {
+  margin-bottom: 10px;
+  box-shadow: 1px 10px 38px 1px rgba(42, 242, 255, 0.75);
+  -webkit-box-shadow: 1px 10px 38px 1px rgba(42, 242, 255, 0.75);
+  -moz-box-shadow: 1px 10px 38px 1px rgba(42, 242, 255, 0.75);
+}*/
+
+button:disabled {
+  background-color: rgb(214, 214, 214);
+  color: rgb(167, 167, 167);
+  cursor: auto;
+}
+
+.loading {
+  display: inline-block;
+  width: 18rem; /* largura equivalente a "..." */
+  text-align: left;
+}
+
+@keyframes dots {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+
+.loading::after {
+  content: "";
+  animation: dots 1s steps(3, end) infinite;
+}
+
+.message {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 52px;
+  text-shadow: 0px 3px 0px black;
+}
